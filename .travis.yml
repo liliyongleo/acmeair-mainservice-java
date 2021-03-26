@@ -8,7 +8,7 @@ jdk:
 
 before_install:
   - export BUILD_TOOL="docker"
-  - export IMAGE_PREFIX="quay.io/powercloud"
+  - export IMAGE_PREFIX="quay.io/demoocp"
   - export ACME_SERVICE_NAME="acmeair-mainservice-java"
   - export ACME_VERSION="1.0"
   - sudo apt-get update
@@ -21,4 +21,4 @@ script:
   - ${BUILD_TOOL} push ${IMAGE_PREFIX}/${ACME_SERVICE_NAME}:${ACME_VERSION}
 
 arch:
-  - ppc64le
+  - s390x
